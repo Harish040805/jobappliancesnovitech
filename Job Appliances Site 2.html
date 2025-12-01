@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Job Appliances</title>
+<style>
+    body {
+        background: linear-gradient(135deg, #dfe9f3, #ffffff);
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    h1 {
+        color: mediumblue;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .container-wrapper {
+        display: flex;
+        gap: 90px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box-container {
+        position: relative;
+        width: 200px;
+        height: 350px;
+        perspective: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: white;
+        border-radius: 15%;
+        border: 4px solid mediumblue;
+        transition: transform 0.5s ease;
+        z-index: 0;
+    }
+
+    .front-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 300px;
+        background: white;
+        border-radius: 15%;
+        border: 4px solid mediumblue;
+        transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease, border 0.4s ease;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: mediumblue;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        user-select: none;
+        overflow: hidden;
+    }
+
+    .box-container:hover .front-box {
+        background: mediumblue;
+        color: white;
+        border: 4px solid white;
+        transform: scale(1.1) translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+    }
+
+    .box-container:hover .back-box {
+        transform: rotate(45deg);
+    }
+
+    .box-label {
+        margin-top: 320px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+        user-select: none;
+        width: 100%;
+        background-color: mediumblue;
+        padding: 10px 0;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .box-label:hover {
+        color: mediumblue;
+        background-color: white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+.front-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 15%;
+  pointer-events: none;
+  transition: filter 0.4s ease;
+  position: relative;
+  z-index: 3;
+}
+
+
+
+</style>
+</head>
+<body>
+<h1>Harish's Club</h1>
+<br><br><br>
+<div class="container-wrapper">
+
+    <div class="box-container">
+        <div class="back-box"></div>
+        <div class="front-box">
+            <img src="https://imgs.search.brave.com/pSfOCR5EOAlz8fWR1eA_0qzTjv5NDcmP0yNwZkMZngk/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTM0/OTI5Nzk3NC9waG90/by9tdWx0aS1ldGhu/aWMtZ3JvdXAtb2Yt/bGF0aW4tYW1lcmlj/YW4tY29sbGVnZS1z/dHVkZW50cy1zbWls/aW5nLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz0tUURaTklx/SnZhMG9DeV9zR3VU/a1Qwa2pmbHFFU2ho/MEdtYUlNTHZwNWR3/PQ" alt="Freshers" />
+        </div>
+        <div class="box-label">Freshers</div>
+    </div>
+
+    <div class="box-container">
+        <div class="back-box"></div>
+        <div class="front-box">
+            <img src="https://cdn.create.vista.com/api/media/medium/347541088/stock-photo-male-female-job-seekers-using-laptops-while-sitting-interview-office?token=" alt="Job Seekers" />
+        </div>
+        <div class="box-label">Job Seekers</div>
+    </div>
+
+    <div class="box-container">
+        <div class="back-box"></div>
+        <div class="front-box">
+            <img src="https://imgs.search.brave.com/uEwBapCYNCWCShlI-cSN_8QIWaAU2AvSvXYuO0nlVxI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTE4/MTA5MjM0Ny9waG90/by9zZW5pb3ItZXhl/Y3V0aXZlLWxhdGlu/LW1hbi13aXRoLWJs/dWUtc3VpdC1hbmQt/Y3Jvc3NlZC1hcm1z/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz1KN1NlNEtWU0VK/ZHY1bTRoaENoUEhR/bFZjS2FyV040c0Ry/d015Ui13RmU0PQ" alt="Working Professionals" />
+        </div>
+        <div class="box-label">Working Professionals</div>
+    </div>
+
+    <div class="box-container">
+        <div class="back-box"></div>
+        <div class="front-box">
+            <img src="https://imgs.search.brave.com/MffuGFH4fMYqPJsClJkFJi98pz33yEy0eAmrTM7ZMTA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9k/cmVhbXktYWZyaWNh/bi13b21hbi1ncmFk/dWF0ZS1zbWlsaW5n/LXRoaW5raW5nLXNp/dHRpbmctd2l0aC1i/b29rc18xNzY0MjAt/MTQzNDIuanBnP3Nl/bXQ9YWlzX2h5YnJp/ZCZ3PTc0MCZxPTgw" alt="Students" />
+        </div>
+        <div class="box-label">Students</div>
+    </div>
+
+    <div class="box-container">
+        <div class="back-box"></div>
+        <div class="front-box">
+            <img src="https://imgs.search.brave.com/a9agTOdGaSx61W5DeyVUBGjNPxCx4CNDMAmVuB6ssco/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9kaXZlcnNlLXBl/b3BsZS1wbmctdHJh/bnNwYXJlbnQtYmFj/a2dyb3VuZF81Mzg3/Ni0xMDE5ODEyLmpw/Zz9zZW10PWFpc19o/eWJyaWQmdz03NDAm/cT04MA" alt="Others" />
+        </div>
+        <div class="box-label">Others</div>
+    </div>
+
+</div>
+<br><br><br><br><br>
+</body>
+</html>
