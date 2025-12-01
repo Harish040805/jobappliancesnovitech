@@ -41,7 +41,7 @@
       return;
     }
     if (form.checkValidity()) {
-      window.location.href = 'file:///C:/Users/HP/OneDrive/Desktop/Job%20Appliances%20Site%202.html';
+      window.location.href = 'https://harish040805.github.io/jobappliancesnovitech/jobappliancesnovitech.html';
     }
   });
 
