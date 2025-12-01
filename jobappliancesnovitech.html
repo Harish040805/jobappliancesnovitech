@@ -5,131 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Job Appliances</title>
 <style>
-    body {
-        background: linear-gradient(135deg, #dfe9f3, #ffffff);
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    h1 {
-        color: mediumblue;
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-        letter-spacing: 1px;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-    }
-
-    .container-wrapper {
-        display: flex;
-        gap: 90px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .box-container {
-        position: relative;
-        width: 200px;
-        height: 350px;
-        perspective: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .back-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        background: white;
-        border-radius: 15%;
-        border: 4px solid mediumblue;
-        transition: transform 0.5s ease;
-        z-index: 0;
-    }
-
-    .front-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 300px;
-        background: white;
-        border-radius: 15%;
-        border: 4px solid mediumblue;
-        transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease, border 0.4s ease;
-        z-index: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        color: mediumblue;
-        font-weight: bold;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        user-select: none;
-        overflow: hidden;
-    }
-
-    .box-container:hover .front-box {
-        background: mediumblue;
-        color: white;
-        border: 4px solid white;
-        transform: scale(1.1) translateY(-10px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-    }
-
-    .box-container:hover .back-box {
-        transform: rotate(45deg);
-    }
-
-    .box-label {
-        margin-top: 320px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: white;
-        text-align: center;
-        user-select: none;
-        width: 100%;
-        background-color: mediumblue;
-        padding: 10px 0;
-        border-radius: 12px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .box-label:hover {
-        color: mediumblue;
-        background-color: white;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-.front-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: fill;
-  border-radius: 15%;
-  pointer-events: none;
-  transition: filter 0.4s ease;
-  position: relative;
-  z-index: 3;
-}
-
-
-
+body { background: linear-gradient(135deg, #dfe9f3, #ffffff); margin: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center;
+    align-items: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+h1 { color: mediumblue; font-size: 2.5rem; margin-bottom: 40px; letter-spacing: 1px; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+.container-wrapper { display: flex; gap: 90px; flex-wrap: wrap; justify-content: center; }
+.box-container { position: relative; width: 200px; height: 350px; perspective: 800px; display: flex; flex-direction: column; align-items: center; }
+.back-box { position: absolute; top: 0; left: 0; width: 100%; height: 300px; background: white; border-radius: 15%; border: 4px solid mediumblue; z-index: 0;
+    transition: transform 0.5s ease; }
+.front-box { position: absolute; top: 0; left: 0; width: 100%; height: 300px; background: white; border-radius: 15%; border: 4px solid mediumblue;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, color 0.4s ease, border 0.4s ease; z-index: 1; display: flex;
+    justify-content: center; align-items: center; font-size: 1.5rem; color: mediumblue; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    user-select: none; overflow: hidden; }
+.box-container:hover .front-box { background: mediumblue; color: white; border: 4px solid white; transform: scale(1.1) translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); cursor: pointer; }
+.box-container:hover .back-box { transform: rotate(45deg); }
+.box-label { margin-top: 320px; font-size: 1.1rem; font-weight: 600; color: white; text-align: center; user-select: none; width: 100%;
+    background-color: mediumblue; padding: 10px 0; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s ease, color 0.3s ease; }
+.box-label:hover { color: mediumblue; background-color: white; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+.front-box img { width: 100%; height: 100%; object-fit: fill; border-radius: 15%; pointer-events: none; transition: filter 0.4s ease; position: relative;
+  z-index: 3; }
 </style>
 </head>
 <body>
 <h1>Harish's Club</h1>
 <br><br><br>
 <div class="container-wrapper">
-
     <div class="box-container">
         <div class="back-box"></div>
         <div class="front-box">
@@ -137,7 +38,6 @@
         </div>
         <div class="box-label">Freshers</div>
     </div>
-
     <div class="box-container">
         <div class="back-box"></div>
         <div class="front-box">
@@ -145,7 +45,6 @@
         </div>
         <div class="box-label">Job Seekers</div>
     </div>
-
     <div class="box-container">
         <div class="back-box"></div>
         <div class="front-box">
@@ -153,7 +52,6 @@
         </div>
         <div class="box-label">Working Professionals</div>
     </div>
-
     <div class="box-container">
         <div class="back-box"></div>
         <div class="front-box">
@@ -161,7 +59,6 @@
         </div>
         <div class="box-label">Students</div>
     </div>
-
     <div class="box-container">
         <div class="back-box"></div>
         <div class="front-box">
@@ -169,8 +66,8 @@
         </div>
         <div class="box-label">Others</div>
     </div>
-
 </div>
 <br><br><br><br><br>
 </body>
 </html>
+
