@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Job Appliances</title>
+<link rel="stylesheet" href="jobappliancesnovitechcss.css">
+</head>
+<body>
+<button id="themeToggle" aria-label="Toggle Theme">Theme</button>
+<div class="main">
+  <h3>AI Based Login Page</h3>
+  <br />
+  <h1>User Login</h1>
+  <form id="loginForm">
+    <table>
+      <tr>
+        <td><label for="na">Name </label></td>
+        <td><input type="text" id="na" placeholder="Enter Name" required /></td>
+      </tr>
+      <tr>
+        <td><label for="number">Phone Number</label></td>
+        <td><input type="number" id="number" placeholder="Enter Number" required /></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email</label></td>
+        <td><input type="email" id="email" placeholder="Enter Email" required /></td>
+      </tr>
+      <tr>
+        <td><label>Confirm</label></td>
+        <td>
+          <div class="radio-group">
+            <input type="radio" name="confirm" id="yes" value="yes" required />
+            <label for="yes">Yes</label>
+            <input type="radio" name="confirm" id="no" value="no" required />
+            <label for="no">No</label>
+          </div>
+        </td>
+      </tr>
+<tr class="captcha-row">
+  <td>
+    <label for="captchaInput">
+      Captcha: <span id="captchaQuestion"></span>
+    </label>
+  </td>
+  <td><input type="text" id="captchaInput" placeholder="Answer" required /></td>
+</tr>
+    </table>
+    <button class="submitbutton" type="submit" id="submitBtn" disabled>Submit</button>
+  </form>
+</div>
+</body>
+</html>
